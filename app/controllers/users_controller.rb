@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @events_created = EventUser.find_by_attendee_id(@current_user.id).event
   end
 
   def user_params

@@ -8,6 +8,7 @@
 
 Event.destroy_all
 User.destroy_all
+EventUser.destroy_all
 
 User.create(name:"Larry")
 User.create(name:"Marie")
@@ -17,12 +18,9 @@ Event.create(description:"Conférence sur l'IA", date: DateTime.new(2018,6,1), p
 Event.create(description:"Conférence sur l'IOT", date: DateTime.new(2018,6,12), place: "Cité des Sciences", creator_id: 2)
 Event.create(description:"Grosse Beuverie", date: DateTime.new(2018,6,15), place: "Chez Thomas", creator_id: 1)
 
-EventUser.create(event_id: 1, attendee_id: 1)
 EventUser.create(event_id: 1, attendee_id: 2)
 EventUser.create(event_id: 1, attendee_id: 3)
 
-EventUser.create(event_id: 2, attendee_id: 2)
 EventUser.create(event_id: 2, attendee_id: 1)
 
-EventUser.create(event_id: 3, attendee_id: 1)
 EventUser.create(event_id: 3, attendee_id: 3)

@@ -1,9 +1,14 @@
 <h1>Profil de l'utilisateur</h1>
 
-<p>
+
 <% if logged_in? %>
 
-Bonjour <%= @current_user.name %> ! Bien ou bien ?
+<p>Bonjour <%= @current_user.name %> ! Bien ou bien ?</p>
+<p>Voici les événements auxquels tu participes :</p>
+<%= @current_user.events.each do |event| %>
+<%= event.description %>
+<p> Voici les événements dont tu es l'organisateur :</p>
+<%= 
+<% end %>
 
 <% end %>
-</p>
