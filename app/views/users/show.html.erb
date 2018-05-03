@@ -1,0 +1,9 @@
+<h1>Profil de l'utilisateur</h1>
+
+<p>
+<% if logged_in? %>
+
+Bonjour <%= @current_user.name %> ! Bien ou bien ?
+
+<% end %>
+</p>

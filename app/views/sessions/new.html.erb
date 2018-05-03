@@ -1,0 +1,10 @@
+<h1>Se connecter</h1>
+
+<%= form_with scope: :session, url: login_path do |f| %>
+
+<%= f.label :id %>
+<%= f.text_field :id %>
+
+<%= f.submit %>
+
+<% end %>
