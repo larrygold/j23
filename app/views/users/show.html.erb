@@ -1,14 +1,26 @@
 <h1>Profil de l'utilisateur</h1>
 
-
 <% if logged_in? %>
 
-<p>Bonjour <%= @current_user.name %> ! Bien ou bien ?</p>
-<p>Voici les événements auxquels tu participes :</p>
-<%= @current_user.events.each do |event| %>
-<%= event.description %>
-<p> Voici les événements dont tu es l'organisateur :</p>
-<%= 
-<% end %>
+<p> Bonjour <%= @current_user.name %> !</p>
 
+<p>Voici les événements auxquels vous participez :</p>
+<ul>
+<% @current_user.events.each do |e| %>
+
+
+<li><%= e.description %></li>
+
+<% end %>
+</ul>
+
+<p>Voici les événements que vous organisez :</p>
+
+<ul>
+<% @current_user.created_events.each do |e| %>
+
+<li><%= e.description %></li>
+
+<% end %>
+</ul>
 <% end %>

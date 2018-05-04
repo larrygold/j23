@@ -1,0 +1,10 @@
+<h1>S'enregistrer</h1>
+
+<%= form_with model: @user do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit %>
+
+<% end %>

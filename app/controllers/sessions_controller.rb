@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
-
+  include SessionsHelper
+  
   def new
 
   end
 
   def create
     user = User.find(params[:session][:id])
-    print user
     if user
       log_in(user)
       redirect_to user_show_path
@@ -19,5 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
   end
+
 
 end

@@ -8,7 +8,6 @@
 
 Event.destroy_all
 User.destroy_all
-EventUser.destroy_all
 
 User.create(name:"Larry")
 User.create(name:"Marie")
